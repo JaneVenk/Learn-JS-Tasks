@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    button{
+        border: none;
+        background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="open">▶</button> <button id="close" hidden>▼</button>  Сладости (нажми меня)!
+  <ul id="list" hidden>
+    <li>Пирожное</li>
+    <li>Пончик</li>
+    <li>Мёд</li>
+  </ul>
+
+<script>
+    let open = document.getElementById("open");
+    open.onclick = function(){
+        document.getElementById("list").hidden = false;
+        document.getElementById("close").hidden = false;
+        this.hidden = true;
+    };
+    let close = document.getElementById("close");
+    close.onclick = function(){
+        document.getElementById("list").hidden = true;
+        document.getElementById("open").hidden = false;
+        this.hidden = true;
+    };
+
+</script>
+
+</body>
+</html>
